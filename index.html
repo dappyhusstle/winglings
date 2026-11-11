@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finish claiming your $500 to spend at Wingstop</title>
+<style>
+  :root{
+    --green:#00563B;
+    --green-dark:#003B29;
+    --yellow:#FFC72C;
+    --cream:#FAF6EF;
+    --ink:#111111;
+    --muted:#5c5c5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .topbar{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 20px;background:var(--cream);
+    position:sticky;top:0;z-index:10;
+  }
+  .topbar a{
+    color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;
+  }
+  .share-btn{
+    background:var(--ink);color:#fff;border:none;border-radius:999px;
+    padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;
+    display:flex;align-items:center;gap:8px;
+  }
+  .progress-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:24px 20px 12px;max-width:720px;margin:0 auto;
+  }
+  .progress-head .step-label{font-weight:700;font-size:15px;}
+  .progress-head .step-hint{color:var(--muted);font-size:14px;}
+  .progress-track{
+    max-width:720px;margin:0 auto;padding:0 20px;
+  }
+  .progress-track .track{
+    height:4px;background:#d8d2c4;border-radius:99px;overflow:hidden;
+  }
+  .progress-track .fill{width:78%;height:100%;background:var(--ink);}
+  .container{max-width:720px;margin:0 auto;padding:36px 20px 60px;}
+  .brand{
+    text-align:center;font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:.55em;text-indent:.55em;font-size:20px;color:var(--green);
+    margin-bottom:28px;font-weight:700;
+  }
+  h1{
+    font-family:Georgia,"Times New Roman",serif;font-weight:700;
+    font-size:clamp(32px,6vw,52px);line-height:1.15;margin-bottom:18px;
+  }
+  h1 .amount{color:var(--green);}
+  .sub{color:var(--muted);font-size:17px;margin-bottom:34px;}
+  .reward-card{
+    background:var(--green-dark);color:#fff;border-radius:16px;
+    padding:28px 28px 24px;max-width:420px;margin-bottom:40px;
+    box-shadow:0 18px 40px rgba(0,40,28,.25);
+  }
+  .reward-card .card-brand{
+    font-size:13px;letter-spacing:.35em;font-weight:700;color:var(--yellow);
+    margin-bottom:14px;
+  }
+  .reward-card .card-amount{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:64px;font-weight:700;color:var(--yellow);line-height:1;
+  }
+  .reward-card .card-tag{color:#cfe3da;font-size:14px;margin-top:10px;}
+  .step{
+    display:flex;gap:18px;padding:22px 0;border-top:1px solid #e4ddcf;
+  }
+  .step .num{
+    flex:0 0 auto;width:40px;height:40px;border:1.5px solid var(--ink);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:Georgia,"Times New Roman",serif;font-size:18px;font-weight:700;
+  }
+  .step h2{font-size:18px;font-weight:700;margin-bottom:2px;}
+  .step p{color:var(--muted);font-size:14.5px;}
+  .cta{
+    display:block;width:100%;text-align:center;
+    background:var(--green);color:#fff;text-decoration:none;
+    padding:20px;border-radius:12px;font-size:19px;font-weight:700;
+    margin:28px 0 14px;transition:background .15s ease;
+  }
+  .cta:hover{background:var(--green-dark);}
+  .fine{color:var(--muted);font-size:13.5px;text-align:center;}
+  .faq-title{
+    font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:700;
+    margin:56px 0 10px;
+  }
+  details{border-top:1px solid #e4ddcf;}
+  details:last-of-type{border-bottom:1px solid #e4ddcf;}
+  summary{
+    list-style:none;cursor:pointer;padding:20px 0;font-weight:700;font-size:17px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  summary::after{content:"+";font-size:24px;font-weight:400;color:var(--ink);}
+  details[open] summary::after{content:"\2212";}
+  details p{padding:0 0 20px;color:var(--muted);font-size:15px;}
+  .disclaimer{
+    margin-top:56px;padding-top:24px;border-top:1px solid #e4ddcf;
+    color:#7a7a7a;font-size:12.5px;line-height:1.7;
+  }
+  .disclaimer p{margin-bottom:14px;}
+  @media (max-width:480px){
+    .reward-card .card-amount{font-size:52px;}
+    .progress-head .step-hint{display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="#">&lsaquo; Offers</a>
+    <button class="share-btn" type="button">&#10148; Share</button>
+  </div>
+
+  <div class="progress-head">
+    <span class="step-label">Step 2 of 2</span>
+    <span class="step-hint">Complete your registration</span>
+  </div>
+  <div class="progress-track"><div class="track"><div class="fill"></div></div></div>
+
+  <div class="container">
+    <div class="brand">WINGSTOP</div>
+
+    <h1>Finish claiming your <span class="amount">$500</span> to spend at Wingstop</h1>
+    <p class="sub">You're almost there. Follow the four steps below to qualify for your Wingstop reward.</p>
+
+    <div class="reward-card">
+      <div class="card-brand">WINGSTOP</div>
+      <div class="card-amount">$500</div>
+      <div class="card-tag">Dining reward</div>
+    </div>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div>
+        <h2>Tap "Claim my $500" below</h2>
+        <p>It opens the secure sign-up page.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div>
+        <h2>Enter your email and basic info</h2>
+        <p>Use an email you check. Updates on your reward go there.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div>
+        <h2>Complete 3 to 5 sponsored deals</h2>
+        <p>You pick which ones. Each deal lists its own steps.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div>
+        <h2>Get your $500 to spend at Wingstop</h2>
+        <p>Wings, fries, sides, drinks. Spend it on what you want.</p>
+      </div>
+    </div>
+
+    <a class="cta" href="https://giftclick.org/?offer_id=893&aff_id=209017&source=winglings">Claim my $500</a>
+    <p class="fine">No cost to sign up. Open to the US, UK, Canada, and Australia.</p>
+
+    <h2 class="faq-title">Questions</h2>
+
+    <details>
+      <summary>What counts as a sponsored deal?</summary>
+      <p>Sponsored deals are partner offers shown on the sign-up page. You choose which ones to complete, and each deal lists its own requirements before you start.</p>
+    </details>
+    <details>
+      <summary>Do I have to buy anything?</summary>
+      <p>Not always. Some deals are free sign-ups or trials, others may require a purchase. Every deal shows its terms up front so you can decide.</p>
+    </details>
+    <details>
+      <summary>How long does it take?</summary>
+      <p>Most people finish the steps in one sitting. Deal completion is tracked by the sponsor, and reward timing is shown on the sign-up page.</p>
+    </details>
+    <details>
+      <summary>Who can claim this?</summary>
+      <p>Adults in eligible regions — the US, UK, Canada, and Australia. One claim per person, and the sponsor verifies eligibility before paying out.</p>
+    </details>
+    <details>
+      <summary>Can I do this on my phone or computer?</summary>
+      <p>Yes. The sign-up page works on any device, phone or desktop.</p>
+    </details>
+
+    <div class="disclaimer">
+      <p>This page is not run by, sponsored by, or affiliated with Wingstop. Wingstop is a trademark of its respective owner and is used here only to describe the reward.</p>
+      <p>The $500 reward is provided through a third-party promotion. Eligibility, deal requirements, and reward terms are set by the sponsor and shown on the sign-up page.</p>
+    </div>
+
+    <a class="cta" href="https://giftclick.org/?offer_id=893&aff_id=209017&source=winglings">Claim my $500</a>
+  </div>
+
+</body>
+</html>
